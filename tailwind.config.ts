@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -20,6 +19,15 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        xs: "420px",
+        // Tailwind's defaults:
+        // 'sm': '640px',
+        // 'md': '768px',
+        // 'lg': '1024px',
+        // 'xl': '1280px',
+        // '2xl': '1536px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -1,15 +1,14 @@
-
-import { useState } from 'react';
-import Icon from '@/components/ui/icon';
-import { 
+import { useState } from "react";
+import Icon from "@/components/ui/icon";
+import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
+} from "@/components/ui/tooltip";
 
 interface SocialIconProps {
-  platform: 'github' | 'linkedin' | 'twitter' | 'telegram' | 'email';
+  platform: "github" | "linkedin" | "twitter" | "telegram" | "email";
   url: string;
 }
 
@@ -18,25 +17,25 @@ const SocialIcon = ({ platform, url }: SocialIconProps) => {
 
   const getIconName = (platform: string): string => {
     const iconMap: Record<string, string> = {
-      'github': 'Github',
-      'linkedin': 'Linkedin',
-      'twitter': 'Twitter',
-      'telegram': 'Send',
-      'email': 'Mail',
+      github: "Github",
+      linkedin: "Linkedin",
+      twitter: "Twitter",
+      telegram: "Send",
+      email: "Mail",
     };
-    
-    return iconMap[platform] || 'Link';
+
+    return iconMap[platform] || "Link";
   };
 
   const getPlatformName = (platform: string): string => {
     const nameMap: Record<string, string> = {
-      'github': 'GitHub',
-      'linkedin': 'LinkedIn',
-      'twitter': 'Twitter',
-      'telegram': 'Telegram',
-      'email': 'Email',
+      github: "GitHub",
+      linkedin: "LinkedIn",
+      twitter: "Twitter",
+      telegram: "Telegram",
+      email: "Email",
     };
-    
+
     return nameMap[platform] || platform;
   };
 
@@ -53,18 +52,18 @@ const SocialIcon = ({ platform, url }: SocialIconProps) => {
             onMouseLeave={() => setIsHovered(false)}
             aria-label={getPlatformName(platform)}
           >
-            <div 
+            <div
               className={`
-                w-12 h-12 rounded-full flex items-center justify-center
+                w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center
                 bg-background border border-border transition-all duration-300
-                transform ${isHovered ? 'scale-110 -translate-y-1' : ''}
+                transform ${isHovered ? "scale-110 -translate-y-1" : ""}
                 group-hover:border-accent group-hover:text-accent
                 group-focus:border-accent group-focus:text-accent
               `}
             >
               <Icon
                 name={getIconName(platform)}
-                className="w-5 h-5 transition-transform duration-300 transform group-hover:scale-110"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 transform group-hover:scale-110"
               />
             </div>
           </a>
