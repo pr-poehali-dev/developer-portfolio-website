@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
-
-interface Skill {
-  name: string;
-  percentage: number;
-  color: string;
-}
+import { Skill } from "@/components/sections/Skills";
 
 interface SkillsChartProps {
   skills: Skill[];

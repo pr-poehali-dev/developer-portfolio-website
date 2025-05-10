@@ -2,16 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  demoLink: string;
-  codeLink: string;
-}
+import { Project } from "@/components/sections/Projects";
 
 interface ProjectCardProps {
   project: Project;

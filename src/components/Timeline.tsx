@@ -1,13 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-
-interface Experience {
-  id: number;
-  date: string;
-  title: string;
-  company: string;
-  description: string;
-  achievements: string[];
-}
+import { Experience } from "@/components/sections/Experience";
 
 interface TimelineProps {
   experiences: Experience[];

@@ -3,14 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-interface Testimonial {
-  id: number;
-  text: string;
-  author: string;
-  position: string;
-  avatar: string;
-}
+import { Testimonial } from "@/components/sections/Testimonials";
 
 interface TestimonialSliderProps {
   testimonials: Testimonial[];
