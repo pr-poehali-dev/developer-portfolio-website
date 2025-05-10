@@ -14,6 +14,10 @@
   }
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -47,19 +51,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -91,6 +88,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -110,4 +108,49 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Анимация для мобильного меню */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menu-item-animation {
+  opacity: 0;
+  animation:
+    fadeIn 0.3s ease forwards,
+    slideIn 0.3s ease forwards;
+}
+
+.menu-item-animation:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.menu-item-animation:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.menu-item-animation:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.menu-item-animation:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.menu-item-animation:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.menu-item-animation:nth-child(6) {
+  animation-delay: 0.35s;
 }
